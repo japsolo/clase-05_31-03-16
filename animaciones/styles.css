@@ -1,0 +1,92 @@
+.caja{
+	width: 500px;
+	height: 500px;
+	background-color: #000;
+	margin: 20px auto;
+	animation-name: colores;
+	animation-duration:1000ms;
+	animation-timing-function: linear;
+	animation-delay:0;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes colores{
+	0%{
+		background-color: #000;
+	}
+	25%{
+		background-color: #1720CA;
+		width: 700px;
+		border-radius:30px;
+	}
+	50%{
+		background-color: #AF3BCA;
+	}
+	75%{
+		background-color: #E54E3C;
+		box-shadow: 0 0 12px black;
+	}
+	100%{
+		background-color: #FC2141;
+	}
+}
+
+.pelota{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-color: #FF9691;
+	text-align: center;
+	font-size: 80px;
+	line-height: 200px; /* centra verticalmente el texto */
+	animation-name: rodar;
+	animation-duration:1000ms;
+	animation-timing-function: ease-out;
+	animation-delay:1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes rodar{
+	from{
+		transform:translate(0,0) rotate(0deg);
+	}
+	to{
+		transform:translate(800px,0) rotate(320deg);
+	}
+}
+
+.corazon{
+	width: 200px;
+	height: 200px;
+	// border: solid 1px red;
+	transform: rotate(-45deg);
+	margin: 200px auto;
+	animation-name: latir;
+	animation-duration:1500ms;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.parte-a{
+	width: 100px;
+	height: 100px;
+	border-radius: 50px 50px 0 0;
+	background: #A92058;
+}
+.parte-b{
+	height: 100px;
+	background-color:#A92058;
+	border-radius: 0 50px 50px 0;
+}
+
+@keyframes latir{
+	from{
+		transform: rotate(-45deg);
+	}
+	to{
+		transform: rotate(-45deg) scale(2);
+	}
+}

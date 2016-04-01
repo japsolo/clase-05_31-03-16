@@ -1,0 +1,96 @@
+TRANSFORMACIONES
+
+	- rotar
+	- escalar
+	- transladar
+
+	transform: rotate(45deg);
+	-o-transform: rotate(45deg); /* Opera */
+	-ms-transform: rotate(45deg); /* IE */
+	-moz-transform: rotate(45deg); /* Mozilla Firefox */
+	-webkit-transform: rotate(45deg); /* Chrome - Safari */
+
+	Prefijo. Línea de código que sirve para ejecutar la propiedad en browser que no la soportan.
+
+	transform-origin: center center;
+
+	x = left | center | right | npx | n%
+	y = top | center | bottom | npx | n%
+
+
+
+	transform: scale(1.2);
+
+	transform: translate(X,Y);
+
+
+TRANSICIONES
+
+Cambio progresivo entre un estado reposos y un estado rollover.
+
+	transition: propiedad duración línea de tiempo;
+	-webkit-transition: propiedad duración línea de tiempo;
+
+	línea de tiempo = timing function
+
+		- ease (x)
+		- ease-in
+		- ease-out
+		- ease-in-out
+		- linear
+
+
+SOMBRA DE CAJA
+
+	box-shadow: off-horizontal off-vertical blur color;
+
+
+ANIMACIONES @keyframes
+
+	1. Hacer 
+	2. Aplicar
+
+	======
+
+
+	1. Hacer la animación
+
+	@keyframes rodar{
+		from{
+			transform: rotate(0);
+		}
+		to{
+			transform: rotate(360deg);
+		}
+	}
+
+
+	@keyframes colores{
+		0%{
+			background: black;
+		}
+		25%{
+			background: blue;
+		}
+		50%{
+			background: violet;
+		}
+		75%{
+			background: orange;
+		}
+		100%{
+			background: red;
+		}
+	}
+
+
+	2. Aplicar la animación
+
+	.caja{
+		animation-name: colores;
+		animation-duration: 1000ms; /* 1s */
+		animation-timing-function: ease; /* ease-out | ease-in | ease-in-out | linear */
+		animation-delay: 0s;
+		animation-iteration-count:1; /* infinite */ 
+		animation-direction:normal; /* alternate */ 
+	}
